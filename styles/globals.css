@@ -1,14 +1,17 @@
 :root {
+  --font-family: Noto Sans Mono, monospace;
+
   --primary: #7653fc;
   --primary-hover: #5d37f4;
   --black: #3b434e;
+  --gray: #b3c0d9;
   --gray-light: #ebebeb;
   --white: white;
-  --red: #fc836d;
+  --orange: #fc836d;
   --green: #1dc37e;
   --green-light: #c8f8e4;
-  --font-family: Noto Sans Mono, monospace;
   --background-primary: #e5e5e5;
+  --red: #de0000;
 }
 
 html,

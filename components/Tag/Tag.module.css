@@ -1,0 +1,48 @@
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 5px 10px;
+  width: fit-content;
+}
+
+.s {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.m {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.neutral {
+  color: var(--white);
+  background-color: var(--gray);
+
+  font-weight: 700;
+}
+
+.success {
+  color: var(--green);
+  background-color: var(--green-light);
+
+  font-weight: 700;
+}
+
+.transparent {
+  border: 1px solid var(--gray-light);
+}
+
+.attention {
+  color: var(--white);
+  background-color: var(--red);
+
+  font-weight: 700;
+}
+
+.primary {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
