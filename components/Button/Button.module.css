@@ -1,10 +1,11 @@
 .button {
-  display: inline-block;
+  display: flex;
   padding: 10px;
 
   cursor: pointer;
 
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   border: none;
   border-radius: 5px;
 
@@ -29,4 +30,13 @@
 .ghost:hover {
   background-color: var(--primary);
   color: var(--white);
+}
+
+.arrow {
+  margin-left: 10px;
+}
+
+.down {
+  transform: rotate(90deg);
+  transition: transform 0.2s;
 }
