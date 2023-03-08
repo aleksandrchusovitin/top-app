@@ -1,22 +1,21 @@
 :root {
-  --font-family: Noto Sans Mono, monospace;
-
-  --primary: #7653fc;
-  --primary-hover: #5d37f4;
-  --black: #3b434e;
-  --gray: #b3c0d9;
-  --gray-light: #ebebeb;
-  --white: white;
-  --orange: #fc836d;
-  --green: #1dc37e;
-  --green-light: #c8f8e4;
-  --background-primary: #e5e5e5;
-  --red: #de0000;
+	--font-family: noto sans mono, monospace;
+	--primary: #7653FC;
+	--primary-hover: #5D37F4;
+	--black: #3B434E;
+	--gray: #B3C0D9;
+	--gray-light: #EBEBEB;
+	--white: white;
+	--orange: #FC836D;
+	--green: #1DC37E;
+	--green-light: #C8F8E4;
+	--background-primary: #E5E5E5;
+	--red: #DE0000;
 }
 
 html,
 body {
-  font-family: var(--font-family);
-  color: var(--black);
-  background-color: var(--background-primary);
+	background-color: var(--background-primary);
+	color: var(--black);
+	font-family: var(--font-family);
 }

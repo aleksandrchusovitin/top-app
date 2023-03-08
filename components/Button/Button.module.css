@@ -1,42 +1,39 @@
 .button {
-  display: flex;
-  padding: 10px;
-
-  cursor: pointer;
-
-  justify-content: center;
-  align-items: center;
-  border: none;
-  border-radius: 5px;
-
-  font-size: 14px;
-  transition: all 0.2s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 14px;
+	transition: all 0.2s;
 }
 
 .primary {
-  color: var(--white);
-  background-color: var(--primary);
+	background-color: var(--primary);
+	color: var(--white);
 }
 
 .primary:hover {
-  background-color: var(--primary-hover);
+	background-color: var(--primary-hover);
 }
 
 .ghost {
-  border: 1px solid var(--gray-light);
-  background-color: none;
+	border: 1px solid var(--gray-light);
+	background-color: none;
 }
 
 .ghost:hover {
-  background-color: var(--primary);
-  color: var(--white);
+	background-color: var(--primary);
+	color: var(--white);
 }
 
 .arrow {
-  margin-left: 10px;
+	margin-left: 10px;
 }
 
 .down {
-  transform: rotate(90deg);
-  transition: transform 0.2s;
+	transform: rotate(90deg);
+	transition: transform 0.2s;
 }

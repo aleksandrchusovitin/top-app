@@ -1,13 +1,16 @@
-import { Button, Htag, P } from '@/components';
+import { Button, Htag, P, Rating, Tag } from '@/components';
 import {
   ButtonAppereance,
   ButtonArrowDirection,
 } from '@/components/Button/Button.enums';
 import { PSize } from '@/components/P/P.enums';
-import { Tag } from '@/components/Tag/Tag';
 import { TagColor } from '@/components/Tag/Tag.enums';
+import { withLayout } from '@/layout/Layout';
+import { useState } from 'react';
 
-export default function Home() {
+const Home = () => {
+  const [rating, setRating] = useState<number>(1);
+
   return (
     <>
       <Htag level={1}>Title</Htag>
@@ -32,6 +35,10 @@ export default function Home() {
       <Tag color={TagColor.primary}>Tag Primary</Tag>
 
       <Tag href='https://www.google.com/'>Tag Transparent with link</Tag>
+
+      <Rating rating={rating} isEditable setRating={setRating} />
     </>
   );
-}
+};
+
+export default withLayout(Home);
