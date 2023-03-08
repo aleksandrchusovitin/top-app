@@ -1,0 +1,50 @@
+.root {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 40px;
+  align-items: center;
+  grid-template-areas: 'all-rights user-agreement policy';
+  color: var(--white);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  padding: 25px 30px;
+  background-color: var(--primary);
+}
+
+.root p {
+  margin: 0;
+}
+
+.root a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.root a:hover {
+  color: var(--gray-light);
+}
+
+.allRights {
+  grid-area: all-rights;
+}
+
+.userAgreement {
+  grid-area: user-agreement;
+}
+
+.policy {
+  grid-area: policy;
+}
+
+@media (max-width: 765px) {
+  .root {
+    justify-items: center;
+    grid-template-areas:
+      'all-rights'
+      'user-agreement'
+      'policy';
+    grid-template-columns: minmax(320px, 1fr);
+  }
+}
