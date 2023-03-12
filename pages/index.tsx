@@ -6,9 +6,14 @@ import {
 import { PSize } from '@/components/P/P.enums';
 import { TagColor } from '@/components/Tag/Tag.enums';
 import { withLayout } from '@/layout/Layout';
-import { useState } from 'react';
+import { GetStaticProps } from 'next';
+import { FC, useState } from 'react';
+import axios from 'axios';
+import { IMenuItem } from '@/interfaces/menu.interface';
 
-const Home = () => {
+const Home: FC<IHomeProps> = (props) => {
+  const { menu } = props;
+
   const [rating, setRating] = useState<number>(1);
 
   return (
@@ -37,8 +42,35 @@ const Home = () => {
       <Tag href='https://www.google.com/'>Tag Transparent with link</Tag>
 
       <Rating rating={rating} isEditable setRating={setRating} />
+
+      <ul>
+        {menu.map((m) => (
+          <li key={m._id.secondCategory}>{m._id.secondCategory}</li>
+        ))}
+      </ul>
     </>
   );
 };
 
 export default withLayout(Home);
+
+export const getStaticProps: GetStaticProps<IHomeProps> = async () => {
+  const FIRST_CATEGORY = 0;
+
+  const url = new URL('/api/top-page/find', process.env.NEXT_PUBLIC_DOMAIN);
+  const { data: menu } = await axios.post<Array<IMenuItem>>(url.href, {
+    firstCategory: FIRST_CATEGORY,
+  });
+
+  return {
+    props: {
+      menu,
+      firstCategory: FIRST_CATEGORY,
+    },
+  };
+};
+
+interface IHomeProps extends JSX.IntrinsicAttributes {
+  menu: Array<IMenuItem>;
+  firstCategory: number;
+}
