@@ -1,0 +1,18 @@
+.menuItem {
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 19px;
+}
+
+.menuItemLink {
+	display: block;
+	width: 100%;
+	color: var(--black-light);
+	text-decoration: none;
+}
+
+.menuItemLinkActive,
+.menuItem:hover .menuItemLink {
+	color: var(--primary);
+}

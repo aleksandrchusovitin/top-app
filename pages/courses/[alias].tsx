@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import { FC } from 'react';
 import axios from 'axios';
 import { IMenuItem } from '@/interfaces/menu.interface';
-import { ITopPageModel } from '@/interfaces/toppage.interface';
+import { ITopPageModel } from '@/interfaces/page.interface';
 import { ParsedUrlQuery } from 'node:querystring';
 import { IProductModel } from '@/interfaces/product.interface';
 
@@ -11,7 +11,7 @@ const FIRST_CATEGORY = 0;
 const PRODUCTS_LIMIT = 10;
 
 const Course: FC<ICourseProps> = (props) => {
-  const { menu, page, products } = props;
+  const { products } = props;
 
   return <>{products && products.length}</>;
 };

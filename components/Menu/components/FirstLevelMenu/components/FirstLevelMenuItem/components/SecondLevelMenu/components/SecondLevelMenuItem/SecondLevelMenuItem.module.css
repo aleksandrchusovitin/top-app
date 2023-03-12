@@ -1,0 +1,8 @@
+.menuItemTitle {
+	margin-bottom: 10px;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 16px;
+	text-transform: uppercase;
+}

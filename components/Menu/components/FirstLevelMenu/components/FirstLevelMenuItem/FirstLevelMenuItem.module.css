@@ -1,0 +1,22 @@
+.menuItemLink {
+	color: var(--black-light);
+	text-decoration: none;
+}
+
+.menuItemLinkActive,
+.menuItemLink:hover {
+	color: var(--primary);
+}
+
+.menuItem {
+	display: grid;
+	align-items: center;
+	gap: 20px;
+	grid-template-columns: 24px 1fr;
+}
+
+.menuItemTitle {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 25px;
+}

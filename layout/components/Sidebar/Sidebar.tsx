@@ -1,3 +1,4 @@
+import { Menu } from '@/components';
 import { FC } from 'react';
 
 import { ISidebarProps } from './Sidebar.props';
@@ -6,5 +7,9 @@ import { ISidebarProps } from './Sidebar.props';
 export const Sidebar: FC<ISidebarProps> = (props) => {
   const { ...otherProps } = props;
 
-  return <aside {...otherProps}>Sidebar</aside>;
+  return (
+    <aside {...otherProps}>
+      <Menu />
+    </aside>
+  );
 };
